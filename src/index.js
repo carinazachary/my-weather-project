@@ -101,7 +101,7 @@ function primaryCity1(event) {
   axios.get(`${apiUrl}`).then(showWeather);
 }
 let city1Link = document.querySelector("#nyc");
-city1Link.addEventListener("click", primaryCity2);
+city1Link.addEventListener("click", primaryCity1);
 
 function primaryCity2(event) {
   event.preventDefault();
