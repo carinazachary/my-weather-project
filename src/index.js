@@ -34,7 +34,10 @@ weekday();
 //Homework Week 4-Question 2:
 function defaultLoad(city) {
   let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let defaultCity = document.querySelector("h1");
+  defaultCity.innerHTML = `${city}`;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(`${apiUrl}`).then(showWeather);
 }
 defaultLoad("New York");
