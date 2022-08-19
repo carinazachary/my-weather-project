@@ -5,7 +5,7 @@ console.log(currentTime);
 console.log(currentTime.getHours());
 
 console.log(currentTime.getMinutes());
-//Homework Week 4-Question 1:
+
 function weekday() {
   let days = [
     "Sunday",
@@ -31,7 +31,7 @@ function weekday() {
   h2.innerHTML = `${dayTime}`;
 }
 weekday();
-//Homework Week 4-Question 2:
+
 function defaultLoad(city) {
   let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
   let defaultCity = document.querySelector("h1");
@@ -89,6 +89,45 @@ function showPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(`${apiUrl}`).then(showWeather);
 }
+
+function primaryCity1(event) {
+  event.preventDefault();
+  let city = "New York";
+  let units = "metric";
+  let primary2 = document.querySelector("h1");
+  primary2.innerHTML = `${city}`;
+  let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(`${apiUrl}`).then(showWeather);
+}
+let city1Link = document.querySelector("#nyc");
+city1Link.addEventListener("click", primaryCity2);
+
+function primaryCity2(event) {
+  event.preventDefault();
+  let city = "Philadelphia";
+  let units = "metric";
+  let primary2 = document.querySelector("h1");
+  primary2.innerHTML = `${city}`;
+  let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(`${apiUrl}`).then(showWeather);
+}
+let city2Link = document.querySelector("#phi");
+city2Link.addEventListener("click", primaryCity2);
+
+function primaryCity3(event) {
+  event.preventDefault();
+  let city = "Los Angeles";
+  let units = "metric";
+  let primary2 = document.querySelector("h1");
+  primary2.innerHTML = `${city}`;
+  let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(`${apiUrl}`).then(showWeather);
+}
+let city3Link = document.querySelector("#losAng");
+city3Link.addEventListener("click", primaryCity3);
 
 function showWeather(response) {
   let temp = Math.round(response.data.main.temp);
