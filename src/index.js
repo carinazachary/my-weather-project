@@ -136,6 +136,11 @@ function showWeather(response) {
   let windSpeed = "Wind:" + Math.round(response.data.wind.speed) + "km/hr";
   let currentCity = response.data.name;
 
+  let currentIcon = document.querySelector("#actualIcon");
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = temp;
   let skyCondition = document.querySelector("#skies");
