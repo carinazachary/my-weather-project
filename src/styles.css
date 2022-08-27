@@ -35,9 +35,9 @@ h4 {
 }
 
 .card {
-  padding: 20px 20px 20px 20px;
+  padding: 5px 5px 0px 5px;
   margin: 0 10px;
-  border: 4px solid #145084;
+  border: 6px solid #145084;
   border-radius: 28px;
 }
 
@@ -106,11 +106,11 @@ a {
 .col-10 {
   display: block;
   position: relative;
-  bottom: 100px;
+  bottom: 200px;
 }
 
 .col {
   display: block;
   position: relative;
-  bottom: 100px;
+  bottom: 200px;
 }
