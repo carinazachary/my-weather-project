@@ -35,10 +35,14 @@ h4 {
 }
 
 .card {
-  padding: 5px 5px 0px 5px;
+  padding: 5px 10px 0px 10px;
   margin: 0 10px;
   border: 6px solid #145084;
   border-radius: 28px;
+}
+
+.card-body {
+  padding: 20px 20px 10px 20px;
 }
 
 a {
@@ -61,11 +65,12 @@ a {
   border: 2px solid #145084;
   border-radius: 4px;
   text-align: center;
-  font-size: 25px;
-  padding: 40px 10px;
+  font-size: 20px;
+  padding: 30px 10px;
+  margin: 20px 0px;
   position: relative;
-  top: 20px;
-  left: -5px;
+  top: 40px;
+  left: -1px;
 }
 
 .icon {
@@ -103,14 +108,37 @@ a {
   font-size: 60px;
 }
 
-.col-10 {
+.humidityElement {
+  display: block;
+  position: relative;
+  left: 20px;
+  bottom: 200px;
+}
+.windElement {
   display: block;
   position: relative;
   bottom: 200px;
+  left: 40px;
 }
 
 .col {
   display: block;
   position: relative;
-  bottom: 200px;
+  bottom: 180px;
+}
+
+.source {
+  display: block;
+  position: relative;
+  left: 40px;
+  bottom: 50px;
+  font-size: 13px;
+}
+
+.signature {
+  display: block;
+  position: relative;
+  left: 150px;
+  bottom: 70px;
+  font-size: 14px;
 }
