@@ -64,6 +64,8 @@ a {
   position: relative;
   top: 40px;
   left: -1px;
+  width: 100px;
+  height: 170px;
 }
 
 .icon {
@@ -111,14 +113,14 @@ a {
 .humidityElement {
   display: block;
   position: relative;
-  left: 600px;
-  bottom: 380px;
+  left: 795px;
+  bottom: 280px;
 }
 .windElement {
   display: block;
   position: relative;
-  bottom: 380px;
-  left: 40px;
+  bottom: 303px;
+  left: 665px;
 }
 
 .col {
