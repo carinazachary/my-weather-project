@@ -132,7 +132,7 @@ a {
 .source {
   display: block;
   position: relative;
-  left: 66px;
+  left: 200px;
   bottom: 300px;
   font-size: 13px;
 }
@@ -140,7 +140,7 @@ a {
 .signature {
   display: block;
   position: relative;
-  left: 175px;
+  left: 310px;
   bottom: 320px;
   font-size: 14px;
 }
