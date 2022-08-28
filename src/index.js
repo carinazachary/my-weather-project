@@ -60,7 +60,7 @@ function convertToFahrenheit(event) {
   let temperatureElement = document.querySelector("#actualDegree");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -70,10 +70,12 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector("#actualDegree");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  temperatureElement.innerHTML = celsiusTemp;
 }
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemp = null;
 
 function findLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -130,7 +132,8 @@ let city3Link = document.querySelector("#losAng");
 city3Link.addEventListener("click", primaryCity3);
 
 function showWeather(response) {
-  let temp = Math.round(response.data.main.temp);
+  celsiusTemp = Math.round(response.data.main.temp);
+  let temp = celsiusTemp;
   let weatherDescription = response.data.weather[0].description;
   let humidity = "Humidity:" + response.data.main.humidity + "%";
   let windSpeed = "Wind:" + Math.round(response.data.wind.speed) + "km/hr";
