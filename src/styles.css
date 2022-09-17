@@ -62,14 +62,10 @@ a {
   padding: 30px 10px;
   margin: 30px 20px;
   position: relative;
-  top: 40px;
-  left: -1px;
-  width: 100px;
-  height: 170px;
-}
-
-.icon {
-  font-size: 40px;
+  left: 8px;
+  width: 150px;
+  height: 180px;
+  bottom: 300px;
 }
 
 .actual-temp {
@@ -123,7 +119,7 @@ a {
   left: 702px;
 }
 
-.col {
+-col {
   display: block;
   position: relative;
   bottom: 340px;

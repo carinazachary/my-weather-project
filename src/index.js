@@ -32,6 +32,58 @@ function weekday() {
 }
 weekday();
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#fiveDayForecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
+            <div class="days-card">Fri
+            </br>
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
+                    <strong>89°</strong><small>/70°</small>
+            </div>
+    </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
+            <div class="days-card">Fri
+            </br>
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
+                    <strong>89°</strong><small>/70°</small>
+            </div>
+    </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
+            <div class="days-card">Fri
+            </br>
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
+                    <strong>89°</strong><small>/70°</small>
+            </div>
+    </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
+            <div class="days-card">Fri
+            </br>
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
+                    <strong>89°</strong><small>/70°</small>
+            </div>
+    </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col">
+            <div class="days-card">Fri
+            </br>
+                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
+                    <strong>89°</strong><small>/70°</small>
+            </div>
+    </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function defaultLoad(city) {
   let apiKey = "179d18feef1ed66e09fe6c063186bbfb";
   let defaultCity = document.querySelector("h1");
@@ -155,3 +207,4 @@ function showWeather(response) {
   let h1 = document.querySelector("#city");
   h1.innerHTML = currentCity;
 }
+displayForecast();
