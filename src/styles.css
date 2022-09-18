@@ -58,13 +58,13 @@ a {
   border: 2px solid #145084;
   border-radius: 4px;
   text-align: center;
-  font-size: 18px;
+  font-size: 21px;
   padding: 30px 10px;
   margin: 30px 20px;
   position: relative;
   left: 8px;
   width: 150px;
-  height: 180px;
+  height: 190px;
   bottom: 300px;
 }
 
@@ -128,7 +128,7 @@ a {
 .source {
   display: block;
   position: relative;
-  left: 200px;
+  left: 30px;
   bottom: 300px;
   font-size: 13px;
 }
@@ -136,7 +136,7 @@ a {
 .signature {
   display: block;
   position: relative;
-  left: 310px;
+  left: 140px;
   bottom: 320px;
   font-size: 14px;
 }
