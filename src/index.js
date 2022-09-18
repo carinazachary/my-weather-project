@@ -32,23 +32,38 @@ function weekday() {
 }
 weekday();
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#fiveDayForecast");
 
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-            <div class="days-card">${day}
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+            <div class="days-card">${formatDay(forecastDay.dt)} 
             </br>
-                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt=" width="42/>
-                   <div class="forecastTemp"><strong>89°</strong> / <small>70°</small></div>
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt=" width="42/>
+                   <div class="forecastTemp"><strong>${Math.round(
+                     forecastDay.temp.max
+                   )}°</strong> / <small>${Math.round(
+          forecastDay.temp.min
+        )}°</small></div>
             </div>
     </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
